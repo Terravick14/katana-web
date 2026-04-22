@@ -7,11 +7,11 @@ export default {
   theme: {
     extend: {
       colors: {
-        'deep-black': '#1F4E6D',
-        'charcoal': '#143851', // Adjusted charcoal to fit the blue theme
+        'deep-black': 'rgba(0, 0, 0, 0.9)',
+        'charcoal': '#111111', 
         'gold': '#D4AF37',
         'ivory': '#F5F1E8',
-        'smoke': '#2A2A2E',
+        'smoke': '#9ca3af',
       },
       fontFamily: {
         heading: ['"Playfair Display"', 'serif'],
