@@ -35,48 +35,46 @@ const Hero = () => {
   }, []);
 
   return (
-    <section ref={containerRef} className="relative h-screen w-full flex flex-col lg:flex-row bg-deep-black z-0">
+    <section ref={containerRef} className="relative h-screen w-full flex items-center bg-deep-black z-0 overflow-hidden">
       
-      {/* Left / Text Side */}
-      <div ref={textRef} className="w-full lg:w-1/2 h-full flex flex-col justify-center px-8 lg:px-20 xl:px-32 z-10 pt-20 lg:pt-0 pb-10 lg:pb-0 bg-deep-black">
-        <h1 className="hero-text-elem text-7xl md:text-9xl text-ivory font-heading italic tracking-wider mb-2 leading-[1.1]">
-          Katana
-        </h1>
-        <h2 className="hero-text-elem text-2xl md:text-4xl text-gold font-heading italic tracking-wide font-light mb-8">
-          Donde cada platillo es una obra maestra
-        </h2>
-        <p className="hero-text-elem text-ivory/90 max-w-lg text-lg md:text-xl font-body font-light mb-12 leading-relaxed tracking-wide">
-          Transformamos ingredientes en experiencias. <span className="text-gold font-heading italic opacity-100">Sushi, variedad de platillos y postres</span> diseñados para sorprender.
-        </p>
-        
-        <div className="hero-text-elem flex flex-col sm:flex-row gap-6 items-start sm:items-center">
-          <a href="#menu" className="group relative px-8 py-4 bg-gold text-deep-black font-medium tracking-wide uppercase text-sm overflow-hidden flex items-center gap-3 transition-colors hover:bg-ivory hover:text-deep-black rounded-xl duration-300">
-            Ver Menú
-            <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-          </a>
-          
-          <a href="https://wa.me/526471065375?text=Hola,%20me%20gustar%C3%ADa%20hacer%20una%20reservaci%C3%B3n." target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-transparent border border-smoke text-ivory font-medium tracking-wide uppercase text-sm hover:border-gold hover:text-gold transition-colors duration-300 rounded-xl">
-            Reservar Mesa
-          </a>
-        </div>
-      </div>
+      {/* Background Video taking full screen */}
+      <video 
+        ref={imageRef}
+        src="https://res.cloudinary.com/dddjqjtbk/video/upload/v1776737350/0420_dnpytw.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+        className="absolute inset-0 w-full h-full object-cover origin-center z-0 opacity-40"
+      />
+      {/* Dark overlay to ensure text is always readable against the fire */}
+      <div className="absolute inset-0 bg-gradient-to-r from-deep-black/90 via-deep-black/60 to-transparent z-0 pointer-events-none" />
+      <div className="absolute inset-0 bg-deep-black/40 z-0 pointer-events-none" />
 
-      {/* Right / Image Side */}
-      <div className="w-full lg:w-1/2 h-[45vh] lg:h-full relative overflow-hidden block">
-        {/* Soft edge blend for desktop */}
-        <div className="absolute inset-0 bg-gradient-to-r from-deep-black via-deep-black/60 to-transparent z-10 hidden lg:block" />
-        {/* Soft edge blend for mobile */}
-        <div className="absolute inset-0 bg-gradient-to-t from-deep-black via-deep-black/60 to-transparent z-10 block lg:hidden" />
-        
-        <video 
-          ref={imageRef}
-          src="https://res.cloudinary.com/dddjqjtbk/video/upload/v1776737350/0420_dnpytw.mp4"
-          autoPlay
-          loop
-          muted
-          playsInline
-          className="w-full h-full object-cover origin-center opacity-80"
-        />
+      {/* Main Content Overlay */}
+      <div className="w-full max-w-7xl mx-auto relative z-10 px-8 lg:px-12 flex flex-col justify-center mt-20 md:mt-0">
+        <div ref={textRef} className="max-w-2xl">
+          <h1 className="hero-text-elem text-7xl md:text-9xl text-ivory font-heading italic tracking-wider mb-2 leading-[1.1] drop-shadow-lg">
+            Katana
+          </h1>
+          <h2 className="hero-text-elem text-2xl md:text-4xl text-gold font-heading italic tracking-wide font-light mb-8 drop-shadow-md">
+            Donde cada platillo es una obra maestra
+          </h2>
+          <p className="hero-text-elem text-ivory/90 text-lg md:text-xl font-body font-light mb-12 leading-relaxed tracking-wide drop-shadow-md">
+            Transformamos ingredientes en experiencias. <span className="text-gold font-heading italic opacity-100">Sushi, variedad de platillos y postres</span> diseñados para sorprender.
+          </p>
+          
+          <div className="hero-text-elem flex flex-col sm:flex-row gap-6 items-start sm:items-center">
+            <a href="#menu" className="group relative px-8 py-4 bg-gold text-deep-black font-medium tracking-wide uppercase text-sm overflow-hidden flex items-center gap-3 transition-colors hover:bg-ivory hover:text-deep-black rounded-xl duration-300 shadow-xl">
+              Ver Menú
+              <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+            </a>
+            
+            <a href="https://wa.me/526471065375?text=Hola,%20me%20gustar%C3%ADa%20hacer%20una%20reservaci%C3%B3n." target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-black/40 backdrop-blur-sm border border-gold/50 text-gold font-medium tracking-wide uppercase text-sm hover:bg-gold hover:text-deep-black transition-all duration-300 rounded-xl shadow-lg">
+              Reservar Mesa
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
