@@ -62,8 +62,12 @@ const Hero = () => {
       </div>
 
       {/* Right / Image Side */}
-      <div className="w-full lg:w-1/2 h-64 lg:h-full relative overflow-hidden hidden md:block">
-        <div className="absolute inset-0 bg-gradient-to-r from-deep-black via-transparent to-transparent z-10" />
+      <div className="w-full lg:w-1/2 h-[45vh] lg:h-full relative overflow-hidden block">
+        {/* Soft edge blend for desktop */}
+        <div className="absolute inset-0 bg-gradient-to-r from-deep-black via-deep-black/60 to-transparent z-10 hidden lg:block" />
+        {/* Soft edge blend for mobile */}
+        <div className="absolute inset-0 bg-gradient-to-t from-deep-black via-deep-black/60 to-transparent z-10 block lg:hidden" />
+        
         <video 
           ref={imageRef}
           src="https://res.cloudinary.com/dddjqjtbk/video/upload/v1776737350/0420_dnpytw.mp4"
@@ -71,7 +75,7 @@ const Hero = () => {
           loop
           muted
           playsInline
-          className="w-full h-full object-cover origin-center opacity-70"
+          className="w-full h-full object-cover origin-center opacity-80"
         />
       </div>
     </section>
