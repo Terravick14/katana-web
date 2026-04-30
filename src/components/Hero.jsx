@@ -37,14 +37,11 @@ const Hero = () => {
   return (
     <section ref={containerRef} className="relative h-screen w-full flex items-center bg-deep-black z-0 overflow-hidden">
       
-      {/* Background Video taking full screen */}
-      <video 
+      {/* Background Image taking full screen */}
+      <img 
         ref={imageRef}
-        src="https://res.cloudinary.com/dddjqjtbk/video/upload/v1776737350/0420_dnpytw.mp4"
-        autoPlay
-        loop
-        muted
-        playsInline
+        src="https://res.cloudinary.com/dddjqjtbk/image/upload/v1776846200/dsc_5813_kiiyqd.jpg"
+        alt="Hero Background"
         className="absolute inset-0 w-full h-full object-cover origin-center z-0 opacity-40"
       />
       {/* Dark overlay to ensure text is always readable against the fire */}
