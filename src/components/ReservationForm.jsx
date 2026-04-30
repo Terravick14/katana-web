@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import AnimatedShaderBackground from './ui/AnimatedShaderBackground';
+
 
 const ReservationForm = () => {
   const [formData, setFormData] = useState({
@@ -24,10 +24,7 @@ const ReservationForm = () => {
   return (
     <section className="py-24 px-6 relative bg-deep-black z-10 flex items-center justify-center overflow-hidden">
       
-      {/* Animated Shader Background con opacidad muy leve */}
-      <div className="absolute inset-0 z-0 opacity-30 mt-0 pointer-events-none mix-blend-screen overflow-hidden">
-        <AnimatedShaderBackground />
-      </div>
+
 
       <div className="max-w-xl w-full relative z-10">
         <div className="text-center mb-12">
