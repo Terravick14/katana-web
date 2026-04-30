@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import Hero from './components/Hero.jsx';
 import Showcase from './components/Showcase.jsx';
-import Manifesto from './components/Manifesto.jsx';
+
 import InteractiveMenu from './components/InteractiveMenu.jsx';
 import ReservationForm from './components/ReservationForm.jsx';
 import Metrics from './components/Metrics.jsx';
@@ -35,7 +35,7 @@ function App() {
       <main className="w-full overflow-hidden flex flex-col">
         <Hero />
         <Showcase />
-        <Manifesto />
+
         <div id="menu"><InteractiveMenu /></div>
         <div id="reserva"><ReservationForm /></div>
         <Metrics />
