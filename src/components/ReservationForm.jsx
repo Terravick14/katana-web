@@ -23,8 +23,12 @@ const ReservationForm = () => {
 
   return (
     <section className="py-24 px-6 relative bg-deep-black z-10 flex items-center justify-center overflow-hidden">
-      
-
+      {/* Background Image */}
+      <img 
+        src="https://res.cloudinary.com/dddjqjtbk/image/upload/v1776847109/dsc_6039_xzuzd8.jpg" 
+        alt="Reservation Background" 
+        className="absolute inset-0 w-full h-full object-cover z-0 opacity-30 pointer-events-none"
+      />
 
       <div className="max-w-xl w-full relative z-10">
         <div className="text-center mb-12">
