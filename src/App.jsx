@@ -34,10 +34,9 @@ function App() {
       
       <main className="w-full overflow-hidden flex flex-col">
         <Hero />
-        <Showcase />
-
         <div id="menu"><InteractiveMenu /></div>
         <div id="reserva"><ReservationForm /></div>
+        <Showcase />
         <Metrics />
         <div id="ubicacion"><LocationCTA /></div>
       </main>
